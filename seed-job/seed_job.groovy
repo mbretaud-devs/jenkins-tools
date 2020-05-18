@@ -4,6 +4,7 @@ import jenkins.*
 import jenkins.model.* 
 import hudson.*
 import hudson.model.*
+import com.cloudbees.plugins.credentials.Credentials
 
 ignoredRepos = [""]
 
@@ -15,8 +16,8 @@ while(next != null) {
 }
 
 def repositoryJob(reposUrl){
-    def jenkinsCredentials = CredentialsProvider.lookupCredentials(
-            Credentials.class,
+    def jenkinsCredentials = com.cloudbees.plugins.credentials.CredentialsProvider.lookupCredentials(
+            com.cloudbees.plugins.credentials.Credentials.class,
             Jenkins.instance,
             null,
             null
