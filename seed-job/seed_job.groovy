@@ -1,5 +1,9 @@
 import java.net.*;
 import java.io.*;
+import jenkins.*
+import jenkins.model.* 
+import hudson.*
+import hudson.model.*
 
 ignoredRepos = [""]
 
