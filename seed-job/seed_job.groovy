@@ -4,7 +4,6 @@ import jenkins.*
 import jenkins.model.* 
 import hudson.*
 import hudson.model.*
-import com.cloudbees.plugins.credentials.Credentials
 
 ignoredRepos = [""]
 
