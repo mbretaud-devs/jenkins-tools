@@ -3,11 +3,12 @@ import java.io.*;
 
 ignoredRepos = [""]
 
-next = repositoryJob("https://api.github.com/orgs/mbretaud-dockers/repos")
-while(next != null) {
-    println("Repo: ${next}")
-    next = repositoryJob(next)
-}
+println("Coucou)
+
+//next = repositoryJob("https://api.github.com/orgs/mbretaud-dockers/repos")
+//while(next != null) {
+//    next = repositoryJob(next)
+//}
 
 //def repositoryJob(reposUrl){
 //    def reposApi = new URL(reposUrl)
