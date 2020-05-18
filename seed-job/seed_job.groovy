@@ -16,7 +16,7 @@ while(next != null) {
 
 def repositoryJob(reposUrl){
     def jenkinsCredentials = CredentialsProvider.lookupCredentials(
-            com.cloudbees.plugins.credentials.Credentials.class,
+            Credentials.class,
             Jenkins.instance,
             null,
             null
