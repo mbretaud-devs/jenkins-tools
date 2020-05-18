@@ -9,20 +9,14 @@ ignoredRepos = [""]
 
 println("Coucou")
 
+next = repositoryJob("https://api.github.com/orgs/mbretaud-dockers/repos")
+while(next != null) {
+    next = repositoryJob(next)
+}
+
 def repositoryJob(reposUrl){
-    def jenkinsCredentials = com.cloudbees.plugins.credentials.CredentialsProvider.lookupCredentials(
-            com.cloudbees.plugins.credentials.Credentials.class,
-            Jenkins.instance,
-            null,
-            null
-    );
     def reposApi = new URL(reposUrl)
     def token = ""
-    for (creds in jenkinsCredentials) {
-      if(creds.id == "token-github"){
-        token = creds.password
-      }
-    }
 
     def conn = reposApi.openConnection()
     conn.setRequestProperty("Authorization", "token ${token}")
