@@ -5,6 +5,17 @@ ignoredRepos = [""]
 
 println("Coucou")
 
+def jenkinsCredentials = com.cloudbees.plugins.credentials.CredentialsProvider.lookupCredentials(
+        com.cloudbees.plugins.credentials.Credentials.class,
+        Jenkins.instance,
+        null,
+        null
+);
+
+for (creds in jenkinsCredentials) {
+    println(jenkinsCredentials.id)
+}
+
 //next = repositoryJob("https://api.github.com/orgs/mbretaud-dockers/repos")
 //while(next != null) {
 //    next = repositoryJob(next)
