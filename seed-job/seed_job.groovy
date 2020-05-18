@@ -12,7 +12,7 @@ println("Coucou)
 
 //def repositoryJob(reposUrl){
 //    def reposApi = new URL(reposUrl)
-//    def token = "88e33718d7c330473a29f5451c5a9f6e7cf1ee8d"
+//    def token = ""
 //
 //    def conn = reposApi.openConnection()
 //    conn.setRequestProperty("Authorization", "token ${token}")
