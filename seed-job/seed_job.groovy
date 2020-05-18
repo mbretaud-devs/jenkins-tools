@@ -3,7 +3,7 @@ import java.io.*;
 
 ignoredRepos = [""]
 
-println("Coucou)
+println("Coucou")
 
 //next = repositoryJob("https://api.github.com/orgs/mbretaud-dockers/repos")
 //while(next != null) {
